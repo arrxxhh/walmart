@@ -1,0 +1,7 @@
+[
+  { "name": "Basmati Rice", "price": 70, "unit": "kg" },
+  { "name": "Onion",        "price": 20, "unit": "kg" },
+  { "name": "Tomato",       "price": 25, "unit": "kg" },
+  { "name": "Cabbage",      "price": 18, "unit": "kg" },
+  { "name": "Carrot",       "price": 30, "unit": "kg" }
+]

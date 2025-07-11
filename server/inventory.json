@@ -1,0 +1,152 @@
+[
+    {
+        "name": "Rice",
+        "price": 40,
+        "category": "grains"
+    },
+    {
+        "name": "Basmati Rice",
+        "price": 80,
+        "category": "grains"
+    },
+    {
+        "name": "Lentils",
+        "price": 60,
+        "category": "legumes"
+    },
+    {
+        "name": "Chickpeas",
+        "price": 45,
+        "category": "legumes"
+    },
+    {
+        "name": "Black Beans",
+        "price": 55,
+        "category": "legumes"
+    },
+    {
+        "name": "Onions",
+        "price": 30,
+        "category": "vegetables"
+    },
+    {
+        "name": "Tomatoes",
+        "price": 35,
+        "category": "vegetables"
+    },
+    {
+        "name": "Potatoes",
+        "price": 25,
+        "category": "vegetables"
+    },
+    {
+        "name": "Carrots",
+        "price": 20,
+        "category": "vegetables"
+    },
+    {
+        "name": "Spinach",
+        "price": 30,
+        "category": "vegetables"
+    },
+    {
+        "name": "Bell Peppers",
+        "price": 40,
+        "category": "vegetables"
+    },
+    {
+        "name": "Broccoli",
+        "price": 45,
+        "category": "vegetables"
+    },
+    {
+        "name": "Cauliflower",
+        "price": 35,
+        "category": "vegetables"
+    },
+    {
+        "name": "Garlic",
+        "price": 15,
+        "category": "aromatics"
+    },
+    {
+        "name": "Ginger",
+        "price": 18,
+        "category": "aromatics"
+    },
+    {
+        "name": "Cumin",
+        "price": 12,
+        "category": "spices"
+    },
+    {
+        "name": "Turmeric",
+        "price": 10,
+        "category": "spices"
+    },
+    {
+        "name": "Coriander",
+        "price": 14,
+        "category": "spices"
+    },
+    {
+        "name": "Garam Masala",
+        "price": 25,
+        "category": "spices"
+    },
+    {
+        "name": "Coconut Oil",
+        "price": 50,
+        "category": "oils"
+    },
+    {
+        "name": "Olive Oil",
+        "price": 65,
+        "category": "oils"
+    },
+    {
+        "name": "Mustard Oil",
+        "price": 45,
+        "category": "oils"
+    },
+    {
+        "name": "Salt",
+        "price": 8,
+        "category": "basics"
+    },
+    {
+        "name": "Black Pepper",
+        "price": 20,
+        "category": "spices"
+    },
+    {
+        "name": "Yogurt",
+        "price": 35,
+        "category": "dairy"
+    },
+    {
+        "name": "Paneer",
+        "price": 80,
+        "category": "dairy"
+    },
+    {
+        "name": "Milk",
+        "price": 30,
+        "category": "dairy"
+    },
+    {
+        "name": "Wheat Flour",
+        "price": 35,
+        "category": "grains"
+    },
+    {
+        "name": "Cilantro",
+        "price": 12,
+        "category": "herbs"
+    },
+    {
+        "name": "Mint",
+        "price": 15,
+        "category": "herbs"
+    }
+]
