@@ -1,0 +1,352 @@
+[
+    {
+        "id": "item1",
+        "name": "Gluten-Free Bread",
+        "description": "Soft gluten-free bread, perfect for sandwiches.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item2",
+        "name": "Almond Milk",
+        "description": "Dairy-free almond milk, unsweetened.",
+        "allergens": ["nuts"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item3",
+        "name": "Wheat Pasta",
+        "description": "Traditional durum wheat pasta.",
+        "allergens": ["gluten"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item4",
+        "name": "Soy Sauce",
+        "description": "Classic soy sauce, contains wheat.",
+        "allergens": ["soy", "gluten"],
+        "availability": "out_of_stock"
+    },
+    {
+        "id": "item5",
+        "name": "Oat Milk",
+        "description": "Creamy oat milk, dairy-free.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item6",
+        "name": "Peanut Butter",
+        "description": "Smooth peanut butter.",
+        "allergens": ["nuts"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item7",
+        "name": "Cashew Yogurt",
+        "description": "Dairy-free yogurt made from cashews.",
+        "allergens": ["nuts"],
+        "availability": "out_of_stock"
+    },
+    {
+        "id": "item8",
+        "name": "Rice Flour",
+        "description": "Gluten-free rice flour for baking.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item9",
+        "name": "Lactose-Free Milk",
+        "description": "Cow's milk with lactose removed.",
+        "allergens": ["dairy"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item10",
+        "name": "Coconut Aminos",
+        "description": "Soy-free and gluten-free alternative to soy sauce.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item11",
+        "name": "Chickpea Pasta",
+        "description": "High-protein, gluten-free pasta made from chickpeas.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item12",
+        "name": "Sunflower Seed Butter",
+        "description": "Nut-free butter alternative.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item13",
+        "name": "Egg Replacer Powder",
+        "description": "Plant-based powder to replace eggs in baking.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item14",
+        "name": "Vegan Cheese Shreds",
+        "description": "Dairy-free cheese alternative, made from coconut oil.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item15",
+        "name": "Quinoa",
+        "description": "Gluten-free grain, high in protein.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item16",
+        "name": "Tapioca Flour",
+        "description": "Gluten-free flour for thickening and baking.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item17",
+        "name": "Coconut Yogurt",
+        "description": "Dairy-free yogurt made from coconut milk.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item18",
+        "name": "Rice Noodles",
+        "description": "Gluten-free noodles, great for stir-fries.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item19",
+        "name": "Nutritional Yeast",
+        "description": "Cheesy flavor, dairy-free alternative.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item20",
+        "name": "Flax Eggs",
+        "description": "Ground flaxseed mixed with water, egg substitute.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item21",
+        "name": "Gluten-Free Oats",
+        "description": "Certified gluten-free rolled oats.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item22",
+        "name": "Hemp Milk",
+        "description": "Nut-free, dairy-free milk alternative.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item23",
+        "name": "Buckwheat Flour",
+        "description": "Gluten-free flour with a nutty flavor.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item24",
+        "name": "Vegan Mayonnaise",
+        "description": "Egg-free mayonnaise alternative.",
+        "allergens": ["soy"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item25",
+        "name": "Rice Crackers",
+        "description": "Gluten-free and wheat-free crackers.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item26",
+        "name": "Dairy-Free Chocolate Chips",
+        "description": "Chocolate chips made without dairy.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item27",
+        "name": "Xanthan Gum",
+        "description": "Gluten-free binder for baking.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item28",
+        "name": "Arrowroot Powder",
+        "description": "Gluten-free thickener, cornstarch alternative.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item29",
+        "name": "Soy Yogurt",
+        "description": "Dairy-free yogurt made from soy.",
+        "allergens": ["soy"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item30",
+        "name": "Gluten-Free Pizza Crust",
+        "description": "Ready-to-bake gluten-free pizza crust.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item31",
+        "name": "Sprouted Lentil Pasta",
+        "description": "Gluten-free, high-protein pasta.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item32",
+        "name": "Tiger Nut Flour",
+        "description": "Nut-free, gluten-free flour.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item33",
+        "name": "Vegan Butter Sticks",
+        "description": "Dairy-free butter alternative for baking and cooking.",
+        "allergens": ["soy"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item34",
+        "name": "Gluten-Free All-Purpose Flour",
+        "description": "Blend of gluten-free flours for general baking.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item35",
+        "name": "Rice Milk",
+        "description": "Dairy-free, nut-free milk alternative.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item36",
+        "name": "Coconut Cream",
+        "description": "Thick dairy-free cream for cooking and desserts.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item37",
+        "name": "Gluten-Free Granola",
+        "description": "Oats and nuts granola, certified gluten-free.",
+        "allergens": ["nuts"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item38",
+        "name": "Vegan Protein Powder",
+        "description": "Plant-based protein powder (pea, rice, hemp).",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item39",
+        "name": "Corn Tortillas",
+        "description": "Gluten-free tortillas made from corn.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item40",
+        "name": "Dairy-Free Ice Cream",
+        "description": "Ice cream made with coconut milk.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item41",
+        "name": "Gluten-Free Waffles",
+        "description": "Frozen gluten-free waffles.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item42",
+        "name": "Avocado Oil Mayonnaise",
+        "description": "Egg-free mayonnaise made with avocado oil.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item43",
+        "name": "Spelt Flour",
+        "description": "Ancient grain flour, contains gluten but often better tolerated.",
+        "allergens": ["gluten"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item44",
+        "name": "Vegan Cream Cheese",
+        "description": "Dairy-free cream cheese alternative.",
+        "allergens": ["nuts"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item45",
+        "name": "Gluten-Free Brownie Mix",
+        "description": "Easy-to-bake gluten-free brownie mix.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item46",
+        "name": "Cashew Cream",
+        "description": "Dairy-free cream made from cashews.",
+        "allergens": ["nuts"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item47",
+        "name": "Lentil Chips",
+        "description": "High-protein, gluten-free snack chips.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item48",
+        "name": "Gluten-Free Cereal",
+        "description": "Breakfast cereal made from corn and rice.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item49",
+        "name": "Vegan Sour Cream",
+        "description": "Dairy-free sour cream alternative.",
+        "allergens": ["soy"],
+        "availability": "in_stock"
+    },
+    {
+        "id": "item50",
+        "name": "Sweet Potato Noodles",
+        "description": "Gluten-free noodles made from sweet potato.",
+        "allergens": ["none"],
+        "availability": "in_stock"
+    }
+]
