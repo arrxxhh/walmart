@@ -1,0 +1,13 @@
+{
+  "allergies": [
+    "peanuts",
+    "gluten"
+  ],
+  "diet": [],
+  "preferences": [
+    "budget",
+    "high protein"
+  ],
+  "shoppingFrequency": "infrequent",
+  "household": 1
+}

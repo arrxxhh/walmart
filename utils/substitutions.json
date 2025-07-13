@@ -1,0 +1,18 @@
+{
+  "peanut butter": {
+    "safeAlt": "sunflower seed butter",
+    "reason": "Nut-free and similar in taste. Safe for peanut allergies and popular among vegan shoppers."
+  },
+  "almond milk": {
+    "safeAlt": "oat milk",
+    "reason": "Oat milk is dairy- and nut-free. It's also budget-friendly and sustainable."
+  },
+  "whole wheat bread": {
+    "safeAlt": "gluten-free bread",
+    "reason": "Gluten-free bread is a safe option for people with gluten intolerance or celiac disease."
+  },
+  "pasta": {
+    "safeAlt": "chickpea pasta",
+    "reason": "Chickpea pasta is high-protein and gluten-free, ideal for health-conscious shoppers."
+  }
+} 

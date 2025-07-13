@@ -1,0 +1,9 @@
+{
+  "peanuts": ["peanut", "peanut oil", "roasted peanut"],
+  "tree nuts": ["almond", "cashew", "walnut", "hazelnut"],
+  "gluten": ["pasta","wheat", "barley", "rye"],
+  "soy": ["soy", "soy lecithin", "edamame"],
+  "dairy": ["milk", "cheese", "butter", "cream"],
+  "nut": ["peanut", "peanuts", "tree nuts", "almond", "cashew", "walnut", "hazelnut", "nuts"],
+  "nuts": ["peanut", "peanuts", "tree nuts", "almond", "cashew", "walnut", "hazelnut", "nut"]
+} 

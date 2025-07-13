@@ -1,0 +1,124 @@
+[
+  {
+    "order_id": "0XUAKYIV2O",
+    "cart": [
+      "chickpea pasta"
+    ],
+    "quantities": {
+      "chickpea pasta": 1
+    },
+    "store": {
+      "address": "Ferozepur Rd, Ludhiana, Punjab 141001, India",
+      "lat": 30.900965,
+      "lon": 75.857277,
+      "name": "Store A - Walmart Ludhiana"
+    },
+    "pickup_code": "5A1FS3XZ",
+    "profile": {
+      "allergies": [
+        "peanuts",
+        "gluten"
+      ],
+      "diet": [
+        "vegetarian"
+      ],
+      "household": 1,
+      "preferences": [
+        "budget",
+        "high protein"
+      ],
+      "shoppingFrequency": "infrequent"
+    }
+  },
+  {
+    "order_id": "5BPMSPBWOF",
+    "cart": [
+      "peanut butter"
+    ],
+    "quantities": {
+      "peanut butter": 1
+    },
+    "store": {
+      "address": "Ferozepur Rd, Ludhiana, Punjab 141001, India",
+      "lat": 30.900965,
+      "lon": 75.857277,
+      "name": "Store A - Walmart Ludhiana"
+    },
+    "pickup_code": "XGXIG1YG",
+    "profile": {
+      "allergies": [
+        "peanuts",
+        "gluten"
+      ],
+      "diet": [
+        "vegetarian"
+      ],
+      "household": 1,
+      "preferences": [
+        "budget",
+        "high protein"
+      ],
+      "shoppingFrequency": "infrequent"
+    }
+  },
+  {
+    "order_id": "JVQPHFD3E3",
+    "cart": [
+      "butter"
+    ],
+    "quantities": {
+      "butter": 1
+    },
+    "store": {
+      "address": "Ferozepur Rd, Ludhiana, Punjab 141001, India",
+      "lat": 30.900965,
+      "lon": 75.857277,
+      "name": "Store A - Walmart Ludhiana"
+    },
+    "pickup_code": "JBOP8IYB",
+    "profile": {
+      "allergies": [
+        "peanuts",
+        "gluten"
+      ],
+      "diet": [
+        "vegetarian"
+      ],
+      "household": 1,
+      "preferences": [
+        "budget",
+        "high protein"
+      ],
+      "shoppingFrequency": "infrequent"
+    }
+  },
+  {
+    "order_id": "8M9X4HQDPM",
+    "cart": [
+      "peanuts"
+    ],
+    "quantities": {
+      "peanuts": 1
+    },
+    "store": {
+      "address": "Ferozepur Rd, Ludhiana, Punjab 141001, India",
+      "lat": 30.900965,
+      "lon": 75.857277,
+      "name": "Store A - Walmart Ludhiana"
+    },
+    "pickup_code": "I57C6AJS",
+    "profile": {
+      "allergies": [
+        "peanuts",
+        "gluten"
+      ],
+      "diet": [],
+      "household": 1,
+      "preferences": [
+        "budget",
+        "high protein"
+      ],
+      "shoppingFrequency": "infrequent"
+    }
+  }
+]

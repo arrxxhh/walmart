@@ -1,0 +1,28 @@
+[
+  {"name": "Peanut Butter", "sku": "PB1001", "price": 120, "allergens": ["peanuts"], "tags": ["spread", "protein-rich"], "rating": 4.5, "loyaltyPoints": 10},
+  {"name": "Sunflower Seed Butter", "sku": "PB1002", "price": 135, "allergens": [], "tags": ["spread", "nut-free", "vegan"], "rating": 4.8, "loyaltyPoints": 12},
+  {"name": "Gluten-Free Bread", "sku": "B2001", "price": 85, "allergens": ["soy"], "tags": ["bread", "gluten-free"], "rating": 4.2, "loyaltyPoints": 8},
+  {"name": "Whole Wheat Bread", "sku": "B2002", "price": 60, "allergens": ["gluten"], "tags": ["bread", "high-fiber"], "rating": 4.0, "loyaltyPoints": 7},
+  {"name": "Oat Milk", "sku": "D3001", "price": 99, "allergens": [], "tags": ["dairy-alternative", "vegan"], "rating": 4.6, "loyaltyPoints": 9},
+  {"name": "Almond Milk", "sku": "D3002", "price": 110, "allergens": ["tree nuts"], "tags": ["dairy-alternative", "vegan"], "rating": 4.5, "loyaltyPoints": 10},
+  {"name": "Chickpea Pasta", "sku": "P4001", "price": 135, "allergens": [], "tags": ["pasta", "protein-rich", "gluten-free"], "rating": 4.7, "loyaltyPoints": 11},
+  {"name": "Pasta", "sku": "P4002", "price": 65, "allergens": ["gluten"], "tags": ["pasta"], "rating": 4.3, "loyaltyPoints": 6},
+  {
+    "name": "Nuts",
+    "sku": "NUT1001",
+    "price": 100,
+    "allergens": ["nuts"],
+    "tags": ["snack"],
+    "rating": 4.2,
+    "loyaltyPoints": 5
+  },
+  {
+    "name": "Peanut",
+    "sku": "PEA1001",
+    "price": 90,
+    "allergens": ["peanuts", "nuts"],
+    "tags": ["snack"],
+    "rating": 4.1,
+    "loyaltyPoints": 4
+  }
+] 

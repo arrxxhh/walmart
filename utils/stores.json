@@ -1,0 +1,26 @@
+{
+  "Store A - Walmart Ludhiana": {
+    "availableSKUs": ["PB1001", "B2001", "D3002", "P4001"],
+    "address": "Ferozepur Rd, Ludhiana, Punjab 141001, India",
+    "lat": 30.900965,
+    "lon": 75.857277
+  },
+  "Store D - Walmart Ludhiana": {
+    "availableSKUs": ["PB1002", "B2001","B2002", "D3001", "P4001"],
+    "address": "Phullanwal Rd, Ludhiana, Punjab 141013, India",
+    "lat": 30.900969,
+    "lon": 75.857279
+  },
+  "Store B - Walmart Amritsar": {
+    "availableSKUs": ["PB1001", "B2002", "D3002", "P4001"],
+    "address": "GT Rd, Amritsar, Punjab 143001, India",
+    "lat": 31.634308,
+    "lon": 74.872264
+  },
+  "Store C - Walmart Chandigarh": {
+    "availableSKUs": ["PB1002", "B2001", "D3001", "P4002"],
+    "address": "Industrial Area, Chandigarh, 160002, India",
+    "lat": 30.704649,
+    "lon": 76.717873
+  }
+} 
