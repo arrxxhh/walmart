@@ -1,13 +1,21 @@
 {
-  "allergies": [
-    "peanuts",
-    "gluten"
+  "diet": [
+    "high-protein",
+    "low-dairy"
   ],
-  "diet": [],
+  "allergies": [
+    "gluten",
+    "soy",
+    "peanuts"
+  ],
   "preferences": [
     "budget",
-    "high protein"
+    "convenience"
   ],
-  "shoppingFrequency": "infrequent",
-  "household": 1
+  "shoppingFrequency": "frequent",
+  "household": 2,
+  "intolerances": [
+    "dairy"
+  ],
+  "additionalNotes": "Roommate 1 allergies: gluten, soy; Roommate 2 allergy: peanuts; Both roommates have dairy intolerance.  College students, likely limited cooking time."
 }

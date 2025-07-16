@@ -21,6 +21,15 @@ CORS(app)
 
 PROFILE_PATH = "profile_001.json"
 
+# Ensure profile and products files exist
+if not os.path.exists("profile_001.json"):
+    with open("profile_001.json", "w") as f:
+        json.dump({"allergies": [], "preferences": []}, f)
+if not os.path.exists("utils/products.json"):
+    os.makedirs("utils", exist_ok=True)
+    with open("utils/products.json", "w") as f:
+        json.dump([], f)
+
 # Load products and stores from root
 with open("utils/products.json") as f:
     PRODUCTS = json.load(f)
@@ -35,7 +44,7 @@ def parse_profile_with_gemini(user_input):
     prompt = f'''
 You are an expert AI assistant for Walmart. Your job is to convert a user's free-form description of their food preferences, allergies, and shopping habits into a structured JSON profile.
 
-Return valid JSON. All property names and string values must use double quotes ("). Do not use single quotes or Python dicts.
+Return valid JSON. All property names and string values must use double quotes ("). Do n ot use single quotes or Python dicts.
 
 Example output:
 {{
@@ -414,6 +423,70 @@ def place_order():
         return jsonify({"success": True, "order_id": order["order_id"]})
     except Exception as e:
         print(f"[EXCEPTION] /place-order POST: {e}")
+        import traceback; traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
+
+@app.route("/scan-qr/", methods=["POST"])
+def scan_qr():
+    '''
+    Accepts JSON: {"sku": <sku string>}
+    Returns product info, safety analysis, and alternatives based on profile_001.json
+    '''
+    try:
+        data = request.get_json()
+        sku = data.get("sku")
+        if not sku:
+            return jsonify({"error": "Missing SKU"}), 400
+        # Load user profile
+        if not os.path.exists("profile_001.json"):
+            return jsonify({"error": "No user profile found"}), 404
+        with open("profile_001.json") as f:
+            profile = json.load(f)
+        allergies = set(a.lower() for a in profile.get("allergies", []))
+        preferences = set(p.lower() for p in profile.get("preferences", []))
+        # Load products
+        with open("utils/products.json") as f:
+            products = json.load(f)
+        product = next((p for p in products if p["sku"] == sku), None)
+        if not product:
+            return jsonify({"error": "Product not found for SKU"}), 404
+        # Safety analysis
+        product_allergens = set(a.lower() for a in product.get("allergens", []))
+        is_safe = not (allergies & product_allergens)
+        flagged_allergens = list(allergies & product_allergens)
+        # Find up to 2 safe alternatives
+        alternatives = []
+        for alt in products:
+            if alt["sku"] == sku:
+                continue
+            alt_allergens = set(a.lower() for a in alt.get("allergens", []))
+            if not (allergies & alt_allergens):
+                alternatives.append({
+                    "name": alt["name"],
+                    "sku": alt["sku"],
+                    "price": alt["price"],
+                    "tags": alt.get("tags", []),
+                    "rating": alt.get("rating", None)
+                })
+            if len(alternatives) >= 2:
+                break
+        # Build response
+        result = {
+            "product": {
+                "name": product["name"],
+                "sku": product["sku"],
+                "price": product["price"],
+                "allergens": product.get("allergens", []),
+                "tags": product.get("tags", []),
+                "rating": product.get("rating", None)
+            },
+            "is_safe": is_safe,
+            "flagged_allergens": flagged_allergens,
+            "alternatives": alternatives
+        }
+        return jsonify(result)
+    except Exception as e:
+        print(f"[EXCEPTION] /scan-qr/: {e}")
         import traceback; traceback.print_exc()
         return jsonify({"error": str(e)}), 500
 

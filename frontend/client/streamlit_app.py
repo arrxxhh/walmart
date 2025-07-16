@@ -9,6 +9,12 @@ import google.generativeai as genai
 import qrcode
 from io import BytesIO
 import re
+# --- New imports for QR/Barcode scanning ---
+from PIL import Image
+from pyzbar.pyzbar import decode as pyzbar_decode
+
+API_URL = "http://localhost:5050"
+FASTAPI_URL = "http://localhost:8002/upload-image/"
 
 # --- ENV & CONFIG ---
 load_dotenv()
@@ -100,9 +106,70 @@ if "show_cart_review" not in st.session_state:
     st.session_state.show_cart_review = False
 if "cart_processed" not in st.session_state:
     st.session_state.cart_processed = False
+if "scan_chat" not in st.session_state:
+    st.session_state.scan_chat = []
+
+# --- Helper: Load products.json only once ---
+@st.cache_data(show_spinner=False)
+def load_products():
+    with open("utils/products.json", "r") as f:
+        return json.load(f)
+
+# --- Helper: Render chat bubbles ---
+def render_chat_bubble(message, is_user=False, style=None):
+    if is_user:
+        st.markdown(f"""
+        <div style='text-align: right; margin: 10px 0;'>
+            <div style='background: #007bff; color: white; padding: 12px 18px; border-radius: 16px; display: inline-block; max-width: 70%; font-size: 17px;'>
+                {message}
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+    else:
+        st.markdown(f"""
+        <div style='text-align: left; margin: 10px 0;'>
+            <div style='background: #f8f9fa; color: #222; padding: 12px 18px; border-radius: 16px; display: inline-block; max-width: 70%; font-size: 17px; border: 1px solid #e0e0e0;'>
+                {message}
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+# --- Helper: Find alternatives ---
+def find_alternatives(product, profile, products, max_alts=2):
+    allergies = set(a.lower() for a in profile.get("allergies", []))
+    preferences = set(p.lower() for p in profile.get("preferences", []) + profile.get("dietary_preferences", []))
+    candidates = []
+    for p in products:
+        if p["sku"] == product["sku"]:
+            continue
+        if allergies & set(a.lower() for a in p.get("allergens", [])):
+            continue
+        if preferences:
+            if any(pref in p.get("tags", []) for pref in preferences):
+                score = 2
+            else:
+                score = 1
+        else:
+            score = 0
+        # Rank by rating, price, loyaltyPoints
+        score += p.get("rating", 0) + p.get("loyaltyPoints", 0)/10 - p.get("price", 0)/100
+        candidates.append((score, p))
+    candidates.sort(reverse=True, key=lambda x: x[0])
+    return [c[1] for c in candidates[:max_alts]]
+
+# --- Helper: Decode QR/barcode image ---
+def decode_sku_from_image(uploaded_file):
+    try:
+        image = Image.open(uploaded_file)
+        decoded_objs = pyzbar_decode(image)
+        if decoded_objs:
+            return decoded_objs[0].data.decode("utf-8")
+    except Exception:
+        pass
+    return None
 
 # --- TABS ---
-tabs = st.tabs(["Profile", "Cart", "Pickup"])
+tabs = st.tabs(["Profile", "Cart", "Pickup", "Scan Product"])
 
 # --- PROFILE TAB ---
 with tabs[0]:
@@ -585,3 +652,79 @@ with tabs[2]:
                     st.error(f"Failed to get pickup suggestion: {resp.json().get('error', 'Unknown error')}")
             except Exception as e:
                 st.error(f"Request failed: {e}")
+
+# --- SCAN PRODUCT TAB ---
+with tabs[3]:
+    st.header("4️⃣ Scan Product — Allergen & Preference Checker")
+    st.markdown("You can either scan a product by SKU/QR or upload a food image for AI-powered allergen detection.")
+
+    col1, col2 = st.columns(2)
+
+    # --- Section 1: SKU/QR Scan (existing logic) ---
+    with col1:
+        st.subheader("Scan by SKU or QR/Barcode")
+        uploaded_file = st.file_uploader("Upload QR/barcode image", type=["png", "jpg", "jpeg"], key="qr_upload")
+        decoded_sku = None
+        if uploaded_file:
+            decoded_sku = decode_sku_from_image(uploaded_file)
+            if decoded_sku:
+                render_chat_bubble(f"📷 Scanned SKU: <b>{decoded_sku}</b>", is_user=True)
+            else:
+                render_chat_bubble("❌ No QR/barcode detected in the image.", is_user=True)
+        manual_sku = st.text_input("Or enter Product SKU (e.g., PB1001)", key="manual_sku")
+        if manual_sku.strip():
+            decoded_sku = manual_sku.strip()
+            render_chat_bubble(f"⌨️ Entered SKU: <b>{decoded_sku}</b>", is_user=True)
+        if st.button("🔍 Check Product Safety", disabled=not decoded_sku, key="check_sku_btn"):
+            sku = decoded_sku
+            add_scan_chat(f"🔍 Checking product safety for SKU: <b>{sku}</b>", is_user=True)
+            with st.spinner("Checking product safety via backend..."):
+                try:
+                    resp = requests.post(f"{API_URL}/scan-qr/", json={"sku": sku}, timeout=20)
+                    if resp.status_code == 200:
+                        result = resp.json()
+                        product = result["product"]
+                        is_safe = result["is_safe"]
+                        flagged = result["flagged_allergens"]
+                        alternatives = result["alternatives"]
+                        chat_msg = f"🍫 <b>Product:</b> {product['name']} ({product['sku']})<br>💲 <b>Price:</b> ₹{product['price']}<br>"
+                        if not is_safe:
+                            chat_msg += f"❌ <b>Unsafe</b> — contains {', '.join(flagged)}<br>🧠 <b>Explanation:</b> Detected '{', '.join(flagged)}' in ingredient list against your allergy profile."
+                            if alternatives:
+                                alt_lines = []
+                                for alt in alternatives:
+                                    alt_lines.append(f"• <b>{alt['name']}</b> — {', '.join(alt.get('tags', []))}, ₹{alt['price']} ({alt.get('rating', 'N/A')}★)")
+                                chat_msg += "<br>🟢 <b>Alternatives:</b><br>" + "<br>".join(alt_lines)
+                            else:
+                                chat_msg += "<br>❌ No safe alternatives found."
+                        else:
+                            chat_msg += f"✅ <b>Safe</b> — no flagged allergens detected!<br>🟢 This product matches your profile."
+                        add_scan_chat(chat_msg, is_user=False)
+                    else:
+                        error_msg = resp.json().get("error", resp.text)
+                        add_scan_chat(f"❌ Error: {error_msg}", is_user=False)
+                except Exception as e:
+                    add_scan_chat(f"❌ Error: {str(e)}", is_user=False)
+
+    # --- Section 2: Image Allergen Detection (FastAPI) ---
+    with col2:
+        st.subheader("Image Allergen Detection (AI)")
+        food_image = st.file_uploader("Upload a food image", type=["png", "jpg", "jpeg"], key="food_image")
+        if food_image is not None:
+            files = {"file": (food_image.name, food_image, food_image.type)}
+            with st.spinner("Uploading and analyzing image..."):
+                try:
+                    resp = requests.post("http://localhost:8002/upload-image/", files=files, timeout=60)
+                    if resp.status_code == 200:
+                        data = resp.json()
+                        st.success(data.get("message", "Image processed!"))
+                        st.markdown(data.get("allergens_and_alternatives", "No details found."))
+                    else:
+                        st.error(f"Backend error: {resp.text}")
+                except Exception as e:
+                    st.error(f"Request failed: {e}")
+
+    st.markdown("---")
+    st.markdown("### 🗨️ Scan Chat History")
+    for msg, is_user in st.session_state.scan_chat:
+        render_chat_bubble(msg, is_user=is_user)

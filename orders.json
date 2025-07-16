@@ -120,5 +120,204 @@
       ],
       "shoppingFrequency": "infrequent"
     }
+  },
+  {
+    "order_id": "NXT3AFW88V",
+    "cart": [
+      "sunflower seed butter",
+      "chickpea pasta"
+    ],
+    "quantities": {
+      "sunflower seed butter": 1,
+      "chickpea pasta": 1
+    },
+    "store": {
+      "address": "Phullanwal Rd, Ludhiana, Punjab 141013, India",
+      "lat": 30.900969,
+      "lon": 75.857279,
+      "name": "Store D - Walmart Ludhiana"
+    },
+    "pickup_code": "O7YB5XB2",
+    "profile": {
+      "allergies": [
+        "peanuts",
+        "gluten"
+      ],
+      "diet": [
+        "non-vegetarian"
+      ],
+      "household": 1,
+      "preferences": [
+        "budget",
+        "high protein"
+      ],
+      "shoppingFrequency": "infrequent"
+    }
+  },
+  {
+    "order_id": "BGFYPJH4HB",
+    "cart": [
+      "chickpea pasta"
+    ],
+    "quantities": {
+      "chickpea pasta": 1
+    },
+    "store": {
+      "address": "Ferozepur Rd, Ludhiana, Punjab 141001, India",
+      "lat": 30.900965,
+      "lon": 75.857277,
+      "name": "Store A - Walmart Ludhiana"
+    },
+    "pickup_code": "HPF127GL",
+    "profile": {
+      "allergies": [
+        "peanuts",
+        "gluten"
+      ],
+      "diet": [
+        "non-vegetarian"
+      ],
+      "household": 1,
+      "preferences": [
+        "budget",
+        "high protein"
+      ],
+      "shoppingFrequency": "infrequent"
+    }
+  },
+  {
+    "order_id": "A4K01GAU7Y",
+    "cart": [
+      "oat milk",
+      "sunflower seed butter",
+      "chickpea pasta"
+    ],
+    "quantities": {
+      "oat milk": 1,
+      "sunflower seed butter": 1,
+      "chickpea pasta": 1
+    },
+    "store": {
+      "address": "Phullanwal Rd, Ludhiana, Punjab 141013, India",
+      "lat": 30.900969,
+      "lon": 75.857279,
+      "name": "Store D - Walmart Ludhiana"
+    },
+    "pickup_code": "3WV0H4NE",
+    "profile": {
+      "allergies": [
+        "peanuts",
+        "gluten"
+      ],
+      "diet": [
+        "non-vegetarian"
+      ],
+      "household": 1,
+      "preferences": [
+        "budget",
+        "high protein"
+      ],
+      "shoppingFrequency": "infrequent"
+    }
+  },
+  {
+    "order_id": "AWABK3AQBV",
+    "cart": [
+      "oat milk",
+      "bread",
+      "sunflower seed butter",
+      "chickpea pasta"
+    ],
+    "quantities": {
+      "oat milk": 1,
+      "bread": 2,
+      "sunflower seed butter": 1,
+      "chickpea pasta": 2
+    },
+    "store": {
+      "address": "Phullanwal Rd, Ludhiana, Punjab 141013, India",
+      "lat": 30.900969,
+      "lon": 75.857279,
+      "name": "Store D - Walmart Ludhiana"
+    },
+    "pickup_code": "IW87PE18",
+    "profile": {
+      "household_profile": {
+        "household_size": 2,
+        "household_type": "College students, roommates",
+        "living_situation": "Apartment"
+      },
+      "shopping_behavior": {
+        "frequency": "Likely frequent, due to college student lifestyle and need for regular grocery replenishment.",
+        "purchase_channels": [
+          "Likely in-store, potentially online grocery pickup or delivery depending on proximity and time constraints."
+        ],
+        "budget": "Likely budget-conscious, typical of college students."
+      },
+      "product_interests": {
+        "food": {
+          "dietary_restrictions": [
+            {
+              "person": "Roommate 1",
+              "allergies": [
+                "gluten",
+                "soy"
+              ]
+            },
+            {
+              "person": "Roommate 2",
+              "allergies": [
+                "peanuts"
+              ]
+            },
+            {
+              "person": "Roommate 1 or Roommate 2",
+              "intolerances": [
+                "dairy"
+              ]
+            }
+          ],
+          "diet_preferences": [
+            "High-protein",
+            "Low-dairy"
+          ],
+          "potential_products": [
+            "Gluten-free protein sources (e.g., chicken, fish, quinoa, certain protein bars)",
+            "Soy-free protein sources (e.g., chicken, fish, lentils, tofu alternatives)",
+            "Peanut-free alternatives (e.g., sunflower seed butter, almond butter)",
+            "High-protein snacks (e.g., protein bars, nuts (excluding peanuts), Greek yogurt)",
+            "Bulk grains (e.g., rice, quinoa)",
+            "Dairy-free alternatives (e.g., almond milk, soy milk, oat milk, dairy-free yogurt)"
+          ]
+        },
+        "other": [
+          "Likely to purchase affordable household and personal care items."
+        ]
+      },
+      "lifestyle_and_hobbies": {
+        "lifestyle": "Busy college student lifestyle, likely limited cooking time and preference for convenience.",
+        "hobbies": "Unknown, requires further data."
+      },
+      "dietary_needs": {
+        "allergies": [
+          "gluten",
+          "soy",
+          "peanuts"
+        ],
+        "diet": "High-protein, Low-dairy",
+        "intolerances": [
+          "dairy"
+        ]
+      },
+      "additional_notes": {
+        "potential_marketing_strategies": [
+          "Targeted promotions on high-protein, gluten-free, soy-free, and peanut-free products.",
+          "Highlighting convenience options like pre-packaged meals or quick-cooking ingredients.",
+          "Offering student discounts or loyalty programs.",
+          "Promoting online grocery pickup or delivery services for ease of access.",
+          "Promoting dairy-free alternatives"
+        ]
+      }
+    }
   }
 ]
