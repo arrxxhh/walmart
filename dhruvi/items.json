@@ -1,0 +1,142 @@
+[
+  {
+    "id": "almond_milk_001",
+    "name": "Silk Almond Milk",
+    "description": "Unsweetened almond milk, dairy-free alternative",
+    "allergens": ["tree_nuts"],
+    "availability": "in_stock"
+  },
+  {
+    "id": "oat_milk_001", 
+    "name": "Oatly Oat Milk",
+    "description": "Creamy oat milk, naturally dairy-free",
+    "allergens": ["gluten"],
+    "availability": "in_stock"
+  },
+  {
+    "id": "coconut_milk_001",
+    "name": "So Delicious Coconut Milk",
+    "description": "Rich coconut milk beverage, dairy-free",
+    "allergens": ["coconut"],
+    "availability": "in_stock"
+  },
+  {
+    "id": "rice_milk_001",
+    "name": "Rice Dream Rice Milk",
+    "description": "Smooth rice milk, hypoallergenic alternative",
+    "allergens": [],
+    "availability": "in_stock"
+  },
+  {
+    "id": "gluten_free_bread_001",
+    "name": "Udi's Gluten Free Bread",
+    "description": "Soft gluten-free sandwich bread",
+    "allergens": ["eggs"],
+    "availability": "in_stock"
+  },
+  {
+    "id": "vegan_bread_001",
+    "name": "Dave's Killer Bread",
+    "description": "Organic whole grain bread, vegan-friendly",
+    "allergens": ["gluten", "soy"],
+    "availability": "in_stock"
+  },
+  {
+    "id": "sunflower_seed_butter_001",
+    "name": "SunButter Sunflower Seed Butter",
+    "description": "Nut-free sunflower seed butter spread",
+    "allergens": [],
+    "availability": "in_stock"
+  },
+  {
+    "id": "soy_nut_butter_001",
+    "name": "WOWBUTTER Soy Nut Butter",
+    "description": "Peanut-free soy nut butter alternative",
+    "allergens": ["soy"],
+    "availability": "in_stock"
+  },
+  {
+    "id": "cashew_cheese_001",
+    "name": "Miyoko's Cashew Cheese",
+    "description": "Dairy-free cashew-based cheese alternative",
+    "allergens": ["tree_nuts"],
+    "availability": "in_stock"
+  },
+  {
+    "id": "nutritional_yeast_001",
+    "name": "Bragg Nutritional Yeast",
+    "description": "Dairy-free cheese flavor alternative",
+    "allergens": [],
+    "availability": "in_stock"
+  },
+  {
+    "id": "chickpea_pasta_001",
+    "name": "Banza Chickpea Pasta",
+    "description": "Gluten-free pasta made from chickpeas",
+    "allergens": ["legumes"],
+    "availability": "in_stock"
+  },
+  {
+    "id": "quinoa_pasta_001",
+    "name": "Ancient Harvest Quinoa Pasta",
+    "description": "Gluten-free quinoa-based pasta",
+    "allergens": [],
+    "availability": "in_stock"
+  },
+  {
+    "id": "coconut_yogurt_001",
+    "name": "So Delicious Coconut Yogurt",
+    "description": "Dairy-free coconut-based yogurt",
+    "allergens": ["coconut"],
+    "availability": "in_stock"
+  },
+  {
+    "id": "almond_yogurt_001",
+    "name": "Silk Almond Yogurt",
+    "description": "Dairy-free almond-based yogurt",
+    "allergens": ["tree_nuts"],
+    "availability": "in_stock"
+  },
+  {
+    "id": "flax_eggs_001",
+    "name": "Bob's Red Mill Ground Flaxseed",
+    "description": "Egg substitute for baking",
+    "allergens": [],
+    "availability": "in_stock"
+  },
+  {
+    "id": "chia_eggs_001",
+    "name": "Navitas Chia Seeds",
+    "description": "Egg alternative for vegan baking",
+    "allergens": [],
+    "availability": "in_stock"
+  },
+  {
+    "id": "coconut_oil_001",
+    "name": "Spectrum Coconut Oil",
+    "description": "Dairy-free butter alternative for cooking",
+    "allergens": ["coconut"],
+    "availability": "in_stock"
+  },
+  {
+    "id": "olive_oil_001",
+    "name": "Bertolli Extra Virgin Olive Oil",
+    "description": "Dairy-free cooking oil alternative",
+    "allergens": [],
+    "availability": "in_stock"
+  },
+  {
+    "id": "agave_syrup_001",
+    "name": "Wholesome Organic Agave",
+    "description": "Natural sweetener alternative to honey",
+    "allergens": [],
+    "availability": "in_stock"
+  },
+  {
+    "id": "maple_syrup_001",
+    "name": "Pure Maple Syrup",
+    "description": "Natural sweetener, vegan-friendly",
+    "allergens": [],
+    "availability": "in_stock"
+  }
+] 
